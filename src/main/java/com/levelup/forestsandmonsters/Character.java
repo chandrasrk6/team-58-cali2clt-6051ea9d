@@ -1,4 +1,6 @@
-package com.levelup.forestsandmonsters.cli;
+package com.levelup.forestsandmonsters;
+
+import java.beans.Transient;
 
 public class Character {
     /* variable declarations */
@@ -26,7 +28,4 @@ public class Character {
 
     public Character(String characterName) {
         this.characterName = characterName;
-    }
-    
-
-}
+    }}
