@@ -1,4 +1,4 @@
-package com.levelup.forestsandmonsters.features;
+package com.levelup.forestsandmonsters.cli;
 
 public class Character {
     /* variable declarations */
@@ -17,7 +17,7 @@ public class Character {
 
     @Override
     public String toString() {
-        return "Character [characterName=" + characterName + "]";
+        return "Please enter your Character Name:" + characterName + "]";
     }
 
     public void setTestCharacter(Character testCharacter) {
