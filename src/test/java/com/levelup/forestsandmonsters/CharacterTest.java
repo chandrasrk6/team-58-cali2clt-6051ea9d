@@ -1,6 +1,5 @@
 package com.levelup.forestsandmonsters;
 import org.junit.Test;
-import com.levelup.forestsandmonsters.Character;
 
 
 public class CharacterTest {

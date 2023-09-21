@@ -3,7 +3,6 @@ package com.levelup.forestsandmonsters;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import com.levelup.forestsandmonsters.Position;
 
 
 
