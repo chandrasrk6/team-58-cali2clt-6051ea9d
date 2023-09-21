@@ -1,7 +1,5 @@
 package com.levelup.forestsandmonsters.features;
 
-import com.levelup.forestsandmonsters.GameController;
-
 public class Character {
     /* variable declarations */
     String characterName = " C ";
