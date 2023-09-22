@@ -1,45 +1,53 @@
 package com.levelup.forestsandmonsters;
 
 import java.awt.Point;
-
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
-import com.levelup.forestsandmonsters.GameController.GameMap;
-import java.awt.Point;
 
 public class GameMap {
-    static final int DEFAULT_POSITIONS = 100;
-    static final Position DEFAULT_START_POSITION = new Position (0, 0);
-    int numPositions;
-
-    public GameMap() {
-        int numPositions = this.numPositions;
-    }
+    
+    private com.levelup.forestsandmonsters.Position DEFAULT_START_POSITION=new Position(0,0);
+    private com.levelup.forestsandmonsters.Position  Position[];
 
 
-        public Position calculatePosition(Position startingPosition, DIRECTION direction) {
-            Position newPosition = startingPosition;
+        public GameMap() {
+            int k=0;
+            for(int i=0;i<10;i++){
 
-            if (startingPosition == null) {
+                for(int j=0;j<10;j++){
+
+                    Position[k++]=new Position(i,j);
+
+                }
+            }
+        }
+
+        public Position calculatePosition(Position currentPosition, DIRECTION direction) {
+            Position newPosition = currentPosition;
+
+            if (currentPosition == null) {
                 newPosition = DEFAULT_START_POSITION;
             }
 
-            if (direction == NORTH) {
-                newPosition = new Position(newPosition.getX(), newPosition.getY() + 1);
-
-            }else if (direction == SOUTH) {
-                newPosition = new Position(newPosition.getX(), newPosition.getY() - 1);
-
-            }else if (direction == EAST) {
-                newPosition = new Position(newPosition.getX() + 1, newPosition.getY());
-
-            }else if (direction == WEST) {
-                newPosition = new Position(newPosition.getX() - 1, newPosition.getY());
+            if (DIRECTION.NORTH.equals(direction)) {
+                newPosition = new Position(newPosition.coordinates.x, newPosition.coordinates.y + 1);
             }
 
+            if (DIRECTION.EAST.equals(direction)) {
+                newPosition = new Position(newPosition.coordinates.x+1, newPosition.coordinates.y);
+            }
+
+            if (DIRECTION.WEST.equals(direction)) {
+                newPosition = new Position(newPosition.coordinates.x-1, newPosition.coordinates.y);
+            }
+
+            if (DIRECTION.SOUTH.equals(direction)) {
+                newPosition = new Position(newPosition.coordinates.x, newPosition.coordinates.y - 1);
+            }
+            
             if (isPositionValid(newPosition.coordinates) == true) {
                 return newPosition;
             } else {
-                return startingPosition;
+                return currentPosition;
 
             }
         }
@@ -47,9 +55,6 @@ public class GameMap {
         public boolean isPositionValid(Point pointToValidate) {
             return pointToValidate.getX() >= 0 && pointToValidate.getX() <= 9 && pointToValidate.getY() >= 0 && pointToValidate.getY() <= 9;
 
-        }
-        public int getTotalPositions() {
-            return numPositions;
-        }
+        }  
 
     }
