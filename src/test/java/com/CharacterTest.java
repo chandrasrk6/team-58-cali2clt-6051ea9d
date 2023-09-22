@@ -18,6 +18,11 @@ public class CharacterTest {
     public String toString() {
         return "CharacterTest []";
     }
+    @Test
+    public void enterMap (Object currentPosition) {
+    
+        Character.getCurrentPosition(currentPosition);
+    }
 }
 
 

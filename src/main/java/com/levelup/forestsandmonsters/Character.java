@@ -23,8 +23,8 @@ public class Character {
     {
         Character.getCurrentPosition(currentPosition);          
     }
-    private static void getCurrentPosition(Object gameController) {
-        
+    public static void getCurrentPosition(Object gameController) {
+
     }
 }
 
