@@ -1,4 +1,5 @@
 package com;
+
 import org.junit.Test;
 import com.levelup.forestsandmonsters.Character;
 
@@ -18,11 +19,7 @@ public class CharacterTest {
     public String toString() {
         return "CharacterTest []";
     }
-    @Test
-    public void enterMap (Object currentPosition) {
-    
-        Character.getCurrentPosition(currentPosition);
-    }
+
 }
 
 
