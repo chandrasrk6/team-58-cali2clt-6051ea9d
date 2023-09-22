@@ -19,3 +19,5 @@ public class CharacterTest {
         return "CharacterTest []";
     }
 }
+
+
