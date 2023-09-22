@@ -1,18 +1,18 @@
-  package com.levelup.forestsandmonsters;
+package com.levelup.forestsandmonsters;
 
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 import static com.levelup.forestsandmonsters.GameController.DIRECTION.*;
+import com.levelup.forestsandmonsters.GameMap;
 
 import java.awt.Point;
 
-public class GameMap {
+public class GameMapTest {
     static final int DEFAULT_POSITIONS = 100;
     static final Position DEFAULT_START_POSITION = new Position(0, 0);
     int numPositions;
 
-    public GameMap() {
+    public void GameMap() {
         this.numPositions;
-
 
         public Position calculatePosition(Position startingPosition, DIRECTION direction) {
             Position newPosition = startingPosition;
@@ -38,23 +38,9 @@ public class GameMap {
                 return newPosition;
             } else {
                 return startingPosition;
-
-            }
-            }
-    
-
-
-
-        
-
-        
-
-            }
-            }
-            })
+            }            
+                    }
+        private boolean isPositionValid(Point coordinates) {
+            return false;
         }
-    }
-}
-public class GameMap {
-    
-} 
+            }

@@ -11,6 +11,14 @@ public class Position {
         coordinates = new Point (x, y);
     
      }
+
+    public int getX() {
+        return 0;
+    }
+
+    public int getY() {
+        return 0;
+    }
 }
 
 
