@@ -2,18 +2,19 @@ package com.levelup.forestsandmonsters;
 
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 import static com.levelup.forestsandmonsters.GameController.DIRECTION.*;
-import com.levelup.forestsandmonsters.GameMap;
-
 import java.awt.Point;
+
+import org.junit.jupiter.api.Test;
 
 public class GameMapTest {
     static final int DEFAULT_POSITIONS = 100;
     static final Position DEFAULT_START_POSITION = new Position(0, 0);
     int numPositions;
 
-    public void GameMap() {
-        this.numPositions;
-
+    @Test
+    public static void setUpGameMap() {
+       
+   }
         public Position calculatePosition(Position startingPosition, DIRECTION direction) {
             Position newPosition = startingPosition;
 
@@ -23,15 +24,16 @@ public class GameMapTest {
 
             if (direction == NORTH) {
                 newPosition = new Position(newPosition.getX(), newPosition.getY() + 1);
-
+                numPositions++;
             }else if (direction == SOUTH) {
                 newPosition = new Position(newPosition.getX(), newPosition.getY() - 1);
-
+                numPositions++;
             }else if (direction == EAST) {
                 newPosition = new Position(newPosition.getX() + 1, newPosition.getY());
-
+                numPositions++;
             }else if (direction == WEST) {
                 newPosition = new Position(newPosition.getX() - 1, newPosition.getY());
+                numPositions++;
             }
 
             if (isPositionValid(newPosition.coordinates) == true) {
